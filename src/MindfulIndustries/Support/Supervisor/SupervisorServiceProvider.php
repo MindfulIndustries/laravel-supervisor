@@ -21,7 +21,7 @@ class SupervisorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../../../resources/lang', 'supervisor');
+        $this->loadTranslationsFrom(__DIR__ . '/../../../../resources/lang', 'supervisor');
     }
 
 
