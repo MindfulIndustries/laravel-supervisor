@@ -82,7 +82,7 @@ final class Supervisor
                 count($pids) == 0 ||
                 (count($pids) == 1 && $pids[0] == $pid),
                 SupervisorException::class,
-                __('cloud-toolkit::supervisor.process-already-running', [
+                __('supervisor::supervisor.process-already-running', [
                     'process' => $this->processIdentifier,
                     'pid' => implode(static::DELIMETER, $pids),
                 ])
@@ -141,7 +141,7 @@ final class Supervisor
         throw_unless(
             is_null($this->processIdentifier) || $this->processIdentifier === $identifier,
             SupervisorException::class,
-            __('cloud-toolkit::supervisor.process-already-initiated', ['identifier' => $identifier])
+            __('supervisor::supervisor.process-already-initiated', ['identifier' => $identifier])
         );
 
         $this->processIdentifier = $identifier;
@@ -183,7 +183,7 @@ final class Supervisor
         throw_if(
             is_null($this->processIdentifier),
             SupervisorException::class,
-            __('cloud-toolkit::supervisor.unable-resolve-process-identifier')
+            __('supervisor::supervisor.unable-resolve-process-identifier')
         );
 
         return $this->pidsStoragePathname =
