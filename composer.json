@@ -1,0 +1,47 @@
+{
+    "name": "mindfulindustries/laravel-supervisor",
+    "description": "Laravel Process(es) Supervisor.",
+    "license": "proprietary",
+    "type": "library",
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "ext-pcntl": "*",
+        "illuminate/config": "5.7.* || 5.8.*",
+        "illuminate/support": "5.7.* || 5.8.*",
+        "malkusch/lock": "^2.1"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "*",
+        "phpunit/phpunit": "^8.0",
+        "fzaninotto/faker": "^1.4",
+        "orchestra/testbench": "3.7.* || 3.8.*"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MindfulIndustries\\Support\\Supervisor\\SupervisorServiceProvider"
+            ]
+        }
+    }
+}
