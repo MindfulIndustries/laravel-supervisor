@@ -1,7 +1,8 @@
 {
     "name": "mindfulindustries/laravel-supervisor",
     "description": "Laravel Process(es) Supervisor.",
-    "license": "proprietary",
+    "keywords": ["laravel", "process", "supervisor", "php", "package"],
+    "license": "MIT",
     "type": "library",
     "require": {
         "php": "^7.2",
